@@ -1,0 +1,95 @@
+main {
+    align-items: center;
+    justify-content: center;
+}
+
+main p {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+#billeterie {
+    width: 80%;
+    margin: auto;
+    background-color: #ffffff9c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+section {
+    padding: 1em;
+}
+
+#formulaire {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colonne {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.form-text {
+    font-size: 1em;
+}
+
+.form-check-label {
+    font-size: 1.2em;
+}
+
+#tshirt-selectionne {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#tshirt-selectionne .form-check-input {
+    margin-right: 10px; /* Adjust the space between checkbox and label */
+}
+
+#choix-taille {
+    margin-left: 20px; /* Add margin to separate T-shirt sizes from the checkbox */
+}
+
+#choix-taille {
+    visibility: hidden; /* On cache le choix de la taille par défaut */
+    background-color: #ffffff9c;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* On affiche le choix de la taille si le T-shirt est voulu */
+#tshirt1:checked ~ #choix-taille {
+    visibility: visible;
+}
+
+.infos {
+    margin-bottom: .4em;
+    font-size: 1.2em;
+}
+
+.btn {
+    font-size: 1.2em;
+}
+
+/* On souhaite que le bouton et les infos soient alignés à droite */
+.droite {
+    text-align: right;
+}
+
+/* Sur portable, on centre le texte et on met les éléments du formulaire en colonne */
+@media (max-width: 768px) {
+    main p {
+        text-align: center;
+    }
+
+    #formulaire {
+        flex-direction: column;
+    }
+}

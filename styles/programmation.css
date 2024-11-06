@@ -1,0 +1,201 @@
+main {
+    align-items: center;
+}
+
+@media screen and (max-width: 810px) { /* Pour les écrans de moins de 810px */
+	#infos {
+		flex-direction: column;
+	}
+	#logo-mythos-2024 {
+		width: 90%!important;
+	}
+	#infos p {
+		font-size: 5vw!important;
+	}	
+}
+
+/* Code pour les boutons de choix de jour */
+.btn-group {
+	margin-bottom: 1em;
+}
+
+.btn-group a {
+    background-color: #cdcdcd9c;
+    border-color: black!important;
+    color: black;
+    border-radius: 10px;
+	text-decoration: none;
+}
+
+/* On enlève la couleur par défaut de bootstrap */
+.btn-group .btn:active {
+    border-color: #000000!important;
+    background-color: #0000009c;
+}
+
+.btn-group a:hover {
+    border-color: #000000!important;
+    background-color: #0000009c;
+}
+
+.btn-group a:hover {
+	color: white;
+}
+
+/* Artistes */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 1em;
+}
+
+@media screen and (max-width: 810px) { /* Pour les écrans de moins de 810px */
+	.row {
+		flex-direction: column;
+	}
+
+	.img-artistes {
+		width: 25rem!important;
+		padding: 25%!important;
+	}
+}
+
+.row .col {
+	position: relative; /* Pour que le pseudo élément soit positionné par rapport à l'élément parent */
+}
+
+/* Création d'un pseudo élément pour effet de flou au survol de l'image */
+.row .col::before {
+	content: "";
+	position: absolute;
+	border-radius: 10px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: inherit;
+	transition: all 0.3s ease;
+}
+
+/* Effet de flou */
+.row .col:hover::before {
+	filter: blur(5px);
+}
+
+/* Pour savoir quel est le jour sur lequel l'utilisateur a cliqué */
+/* On utilise le + pour cibler le prochain élément suivant le hr, c'est à dire le .row correspondant */
+hr:target + .row {
+    mix-blend-mode: difference; /* ajoute un effet afin de mieux distinguer le jour sélectionné */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Cela permet de centrer les hr */
+#programmation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Code pour les lignes de séparation */
+hr {
+	width: 95vw;
+	border: 3px solid #000000;
+	border-radius: 10px;
+	margin: 1.5em;
+}
+
+.img-artistes {
+	border: 1px solid #ddd; /* bordure */
+	border-radius: 10px;
+    text-align: center;
+	margin: .5em;
+    background-position: center center; /* centrage de l'image */
+    background-size: cover; /* redimensionnement de l'image */
+    background-repeat: no-repeat; /* pas de répétition de l'image */
+    height: 17em;
+    width: 50em;
+}
+
+/* Jour 1 */
+#artiste1 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2024/01/nous-ne-sommes-plus_1600x800-800x400.jpg");
+}
+
+#artiste2 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2024/01/fff_1600x800-800x400.jpg");
+}
+
+#artiste3 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2024/03/jon-onj_1600x800-800x400.jpg");
+}
+
+#artiste4 {
+	background-image:url("https://www.festival-mythos.com/wp-content/uploads/2022/09/eddy-de-pretto_jesus-leonardo_1600x800-800x400.jpg");
+}
+
+/* Jour 2 */
+#artiste5 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/12/eclipse-1600x800_v3-1-800x400.jpg");
+}
+
+#artiste6 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2024/02/nojo-800x400.png");
+}
+
+#artiste7 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/12/raphael-800x400.jpg");
+}
+
+#artiste8 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/11/n-2-800x400.jpg");
+}
+
+/* Jour 3 */
+#artiste9 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/10/juliette-@watgc--800x400.jpeg");
+}
+
+#artiste10 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/11/colinerio_cmanon-villemonteil_2902-b-800x400.jpg");
+}
+
+#artiste11 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/12/naive-new-beaters_1600x800-1-800x400.jpg");
+}
+
+#artiste12 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/12/mairo-1600x800-1-800x400.jpg");
+}
+
+/* Jour 4 */
+#artiste13 {
+	background-image: url("https://www.festival-mythos.com/wp-content/uploads/2023/10/dionysos-portraits-groupe-julien-bruhat-studio-photographe-hd-8-800x400.jpg");
+}
+
+#artiste14 {
+	background-image: url("https://www.strategies.fr/sites/default/files/styles/article_banner/public/media/images/swyp/LQ2437746C/000_32687U6.jpg?itok=GXLUZeoK");
+}
+
+#artiste15 {
+	background-image: url("https://img-4.linternaute.com/63SCWUebauNwSKUij-4miZ9v6ik=/820x546/smart/4cceffa4ad644a1e891d4c9a7870be1e/ccmcms-linternaute/10747318.jpg");
+}
+
+#artiste16 {
+	background-image: url("https://images.lindependant.fr/api/v1/images/view/5a95c1428fe56f42ef423280/large/image.jpg");
+}
+
+
+/* Code pour les noms des artistes */
+/* Le translate permet de centrer le texte */
+.nom-artiste {
+	font-size: 2em;
+	font-weight: 800;
+	text-shadow: 2px 2px 4px #4d5163;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

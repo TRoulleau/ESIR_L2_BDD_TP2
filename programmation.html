@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tom ROULLEAU">
+    <title>Programmation - BDD-IHM TP2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/default_style.css">
+    <link rel="stylesheet" href="./styles/programmation.css">
+    <link rel="icon" href="./ressources/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="debut-header">
+            <a href="./index.html"><img id="Logo_Site" src="./ressources/images/logo_mouche_2024.png" alt="Logo du site"></a>
+            <p>Festival Mouche Rennes 2024</p>
+        </div>
+        <p>BDD-IHM TP2 - 7 avril 2024</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./presentation.html">Présentation</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Programmation</a></li>
+            <li class="nav-item"><a class="nav-link" href="./artiste.html">Artiste</a></li>
+            <li class="nav-item"><a class="nav-link" href="./billeterie.html">Billeterie</a></li>
+            <li class="nav-item"><a class="nav-link" href="./info.html">Info</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <main class="overflow-hidden">
+        <div class="btn-group btn-group-lg"> 
+            <!-- On ajoute un groupe de boutons pour naviguer entre les jours de programmation -->
+            <a href="#separateur-day1" class="btn btn-outline-primary">Jour 1 (5 avril)</a>
+            <a href="#separateur-day2" class="btn btn-outline-primary">Jour 2 (6 avril)</a>
+            <a href="#separateur-day3" class="btn btn-outline-primary">Jour 3 (7 avril)</a>
+            <a href="#separateur-day4" class="btn btn-outline-primary">Jour 4 (8 avril)</a>
+        </div>
+        <div id="programmation">
+            <hr id="separateur-day1"> <!-- On ajoute un séparateur pour chaque jour de programmation. Ils permettent aussi de pointer au bon endroit pour que les éléments ne soient pas sous la navbar -->
+            <div id="day1" class="row">
+                <a class="col img-artistes" id="artiste1" href="./artiste.html"><p class="nom-artiste">Nous ne sommes plus...</p></a>
+                <a class="col img-artistes" id="artiste2" href="./artiste.html"><p class="nom-artiste">FFF<br>+&nbsp;BCUC <br>+&nbsp;Macadam Crocodile</p></a> <!-- On ajoute des espaces insécables pour éviter que les textes soient bizaremment coupés -->
+                <a class="col img-artistes" id="artiste3" href="./artiste.html"><p class="nom-artiste">Jon Onj</p></a>
+                <a class="col img-artistes" id="artiste4" href="./artiste.html"><p class="nom-artiste">Eddy de Pretto<br>+&nbsp;Joanna<br>+&nbsp;Yassine Stein</p></a>
+            </div>
+            <hr id="separateur-day2">
+            <div id="day2" class="row">
+                <a class="col img-artistes" id="artiste5" href="./artiste.html"><p class="nom-artiste">L'Eclipse</p></a>
+                <a class="col img-artistes" id="artiste6" href="./artiste.html"><p class="nom-artiste">NOSJO</p></a>
+                <a class="col img-artistes" id="artiste7" href="./artiste.html"><p class="nom-artiste">1km au Nord</p></a>
+                <a class="col img-artistes" id="artiste8" href="./artiste.html"><p class="nom-artiste">Caravan Palace <br>+&nbsp;Social Dance</p></a>
+            </div>
+            <hr id="separateur-day3">
+            <div id="day3" class="row">
+                <a class="col img-artistes" id="artiste9" href="./artiste.html"><p class="nom-artiste">Juliette</p></a>
+                <a class="col img-artistes" id="artiste10" href="./artiste.html"><p class="nom-artiste">Coline Rio</p></a>
+                <a class="col img-artistes" id="artiste11" href="./artiste.html"><p class="nom-artiste">Naive New Beaters <br>+&nbsp;ATOEM <br>+&nbsp;Pépite</p></a>
+                <a class="col img-artistes" id="artiste12" href="./artiste.html"><p class="nom-artiste">Mairo<br>+&nbsp;Prince Waly<br>+&nbsp;Isha &amp; Limsa d'Aulnay</p></a>
+            </div>
+            <hr id="separateur-day4">
+            <div id="day4" class="row">
+                <a class="col img-artistes" id="artiste13" href="./artiste.html"><p class="nom-artiste">Dionysos<br>+&nbsp;Jan Verstraeten</p></a>
+                <a class="col img-artistes" id="artiste14" href="https://fr.wikipedia.org/wiki/Hugo_Travers"><p class="nom-artiste">Hugo Décrypte</p></a>
+                <a class="col img-artistes" id="artiste15" href="https://fr.wikipedia.org/wiki/Nagui"><p class="nom-artiste">Nagui</p></a>
+                <a class="col img-artistes" id="artiste16" href="https://fr.wikipedia.org/wiki/Sylvain_Durif"><p class="nom-artiste">Le grand monarque</p></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="website-auteur">
+            <p>Auteur : Tom ROULLEAU TDA TP2</p>
+            <a href="mailto:tom.roulleau@etudiant.univ-rennes.fr">Contact</a>
+        </div>
+
+        <p><a href="https://esir.univ-rennes.fr" target="_blank"><img id="Logo_ESIR" src="https://esir.univ-rennes.fr/sites/esir.univ-rennes.fr/files/esir.png" alt="Logo de l'ESIR"></a>©&nbsp;2024&nbsp;CUPGE2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

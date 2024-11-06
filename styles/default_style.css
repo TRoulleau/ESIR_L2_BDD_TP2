@@ -1,0 +1,150 @@
+/* import de la police de caractères Big Shoulders Inline Text de Google Fonts */
+@font-face {
+    font-family: "Big Shoulders Text";
+    src: url('../ressources/fonts/BigShouldersText-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Styles par défaut */
+
+body, h1, p, nav {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100%;
+}
+
+/* animation du fond du site */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* header */
+
+header {
+    font-family: "Big Shoulders Text", sans-serif;
+	font-weight: 600;
+    align-items: center;
+    background-color: #cdcdcd81; /* la couleur est semi-transparente pour laisser apparaître le fond du body */
+    display: flex;
+    padding: 1%;
+    text-align: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header p {
+    text-shadow: 1px 1px 1px #4d5163;
+    color: #272932;
+    padding: 0 1%;
+    font-size: 2.3rem;
+}
+
+#debut-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#Logo_Site {
+    width: 10rem;
+}
+
+@media (max-width: 1000px) {
+    header p {
+        font-size: 1.5rem!important;
+    }
+
+    /* on cache le titre du festival du header */
+    #debut-header p {
+        display: none;
+    }
+}
+
+/* barre de navigation */
+
+.nav-item:hover {
+	background: linear-gradient(90deg, #fad9ff, #ffffff); /* on créé un gradient pour la couleur de fond au survol */
+	background-size: 200% 200%; /* on agrandit le gradient */
+	height: 100%;
+}
+
+.navbar {
+    background-color: #ffffffd9; /* la couleur est semi-transparente pour laisser apparaître le fond du body */
+    padding: 0;
+    font-variant: small-caps; /* on met en majuscule */
+}
+
+.nav-link {
+    font-size: 1.4rem;
+}
+
+.nav-item .active {
+    background-color: #ffffffbc; /* semi-transparente pour laisser apparaître le fond du body */
+}
+
+/* contenu principal */
+
+main {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    font-family: "Big Shoulders Text", sans-serif;
+}
+
+/* footer */
+
+footer {
+    font-family: "Big Shoulders Text", sans-serif;
+    font-weight: 800;
+    font-size: large;
+    display: flex;
+    min-height: max-content;
+    background-color: #cdcdcd81; /* la couleur est semi-transparente pour laisser apparaître le fond du body */
+    padding: 1%;
+    margin-top: auto;
+    justify-content: space-between; /* on écarte les éléments au maximum */
+    text-align: center;
+    align-items: center;
+}
+
+#website-auteur {
+    display: flex;
+    justify-content: space-between;
+}
+
+#website-auteur p, #website-auteur a {
+    margin: 0.3rem; 
+}
+
+/* on souligne le mot contact pour insinuer qu'il est cliquable */
+#website-auteur a {
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+    color: #272932;
+}
+
+#Logo_ESIR {
+    width: 5rem;
+    margin-right: 1rem;
+}

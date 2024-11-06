@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tom ROULLEAU">
+    <title>Caravan Palace - BDD-IHM TP2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/default_style.css">
+    <link rel="stylesheet" href="./styles/artiste.css">
+    <link rel="icon" href="./ressources/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="debut-header">
+            <a href="./index.html"><img id="Logo_Site" src="./ressources/images/logo_mouche_2024.png" alt="Logo du site"></a>
+            <p>Festival Mouche Rennes 2024</p>
+        </div>
+        <p>BDD-IHM TP2 - 7 avril 2024</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./presentation.html">Présentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="./programmation.html">Programmation</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Artiste</a></li>
+            <li class="nav-item"><a class="nav-link" href="./billeterie.html">Billeterie</a></li>
+            <li class="nav-item"><a class="nav-link" href="./info.html">Info</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <main class="overflow-hidden">
+        <!-- Pour faire la même page pour chaque artiste, on peut utiliser PHP avec des paramètres GET dans l'URL pour déterminer quel artiste afficher, ce qui
+        permet de ne pas avoir à créer une page HTML pour chaque artiste. -->
+        <h2 id="nom-artiste">Caravan Palace</h2>
+        <div id="info-artiste">
+            <img src="https://www.festival-mythos.com/wp-content/uploads/2023/11/caravan-1500x700.jpg" class="img-fluid" alt="Caravan Palace">
+            <div id="artiste">
+                <p>Venant de sortir son cinquième album ce printemps 2024, Caravan Palace dévoile un mélange cinglant et exaltant de <b>sons vintages et d'électroniques</b>. Ce cocktail musical insolite et unique qui emprunte au jazz et au swing des années folles et des mouches, leur vaut un succès international qui continue de s'écrire et de se confirmer au fil de leurs sorties d'albums, de leurs tournées mondiales ou de leurs clips à l'univers déjanté et addictif. En une dizaine d'années, le groupe passe ainsi du statut de sensation live de la scène parisienne à celui de phénomène pop <b>mondialement viral</b>. Leurs stats donnent le tournis : <b>2 milliards</b> de streams sur YouTube, <b>800 000 millions</b>, sur Spotify… Ils sont un des très rares groupes français à avoir été couronnés de <b>platine</b> aux États-Unis.<br>Sur scène, Caravan Palace se mue en sextet débridé, capable d'embraser n'importe quelle salle de concert ou festival, de Coachella à Glastonbury en passant par Paléo ou Rock en Seine. Un retour à ne pas manquer !</p>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/caravanpalace" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                    </svg></a>
+                    <a href="https://twitter.com/caravanpalace" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 300 271">
+                        <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"/>
+                    </svg></a>
+                    <a href="https://open.spotify.com/intl-fr/artist/37J1PlAkhRK7yrZUtqaUpQ" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+                        <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path>
+                    </svg></a>
+                    <a href="https://www.deezer.com/fr/artist/259767" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 120.65 120.65">
+                        <path xmlns="http://www.w3.org/2000/svg" d="M101.19 18.41c1.12-6.47 2.75-10.54 4.57-10.55 3.38.01 6.13 14.12 6.13 31.54s-2.75 31.54-6.13 31.54c-1.39 0-2.67-2.4-3.7-6.42-1.63 14.71-5.01 24.82-8.93 24.82-3.03 0-5.75-6.07-7.58-15.65-1.25 18.22-4.38 31.14-8.05 31.14-2.3 0-4.4-5.12-5.95-13.46-1.87 17.21-6.18 29.28-11.22 29.28s-9.36-12.06-11.22-29.28c-1.54 8.34-3.64 13.46-5.95 13.46-3.67 0-6.8-12.93-8.05-31.14-1.83 9.58-4.54 15.65-7.58 15.65-3.91 0-7.3-10.11-8.93-24.82-1.02 4.03-2.31 6.42-3.7 6.42-3.39 0-6.13-14.12-6.13-31.54S11.51 7.86 14.9 7.86c1.82 0 3.44 4.08 4.57 10.55C21.28 7.25 24.21 0 27.53 0c3.94 0 7.35 10.26 8.97 25.15C38.08 14.31 40.48 7.4 43.16 7.4c3.76 0 6.96 13.59 8.15 32.55 2.23-9.72 5.46-15.82 9.03-15.82s6.8 6.1 9.02 15.82C70.55 20.99 73.74 7.4 77.51 7.4c2.68 0 5.07 6.91 6.66 17.75C85.78 10.26 89.2 0 93.13 0c3.31 0 6.25 7.26 8.06 18.41zM0 36.3c0-7.79 1.56-14.1 3.48-14.1s3.48 6.31 3.48 14.1S5.4 50.4 3.48 50.4 0 44.08 0 36.3zm113.7 0c0-7.79 1.56-14.1 3.48-14.1s3.48 6.31 3.48 14.1-1.56 14.1-3.48 14.1-3.48-6.32-3.48-14.1z"></path>
+                    </svg></a>
+                    <a href="https://music.apple.com/artist/caravan-palace/293238693" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32">
+                        <path d="M31.995 8.167c0-0.984-0.083-1.964-0.318-2.922-0.422-1.745-1.417-3.078-2.906-4.057-0.766-0.5-1.609-0.807-2.505-0.969-0.688-0.125-1.385-0.182-2.083-0.198-0.052-0.005-0.109-0.016-0.167-0.021h-16.031c-0.203 0.016-0.406 0.026-0.609 0.036-0.995 0.057-1.984 0.161-2.922 0.536-1.781 0.703-3.068 1.932-3.818 3.703-0.26 0.599-0.391 1.234-0.484 1.88-0.078 0.521-0.12 1.047-0.135 1.573 0 0.042-0.010 0.083-0.010 0.125v16.297c0.010 0.188 0.021 0.375 0.031 0.563 0.068 1.089 0.208 2.167 0.667 3.167 0.865 1.891 2.318 3.135 4.313 3.734 0.557 0.172 1.141 0.25 1.724 0.302 0.74 0.073 1.479 0.083 2.219 0.083h14.708c0.698 0 1.396-0.047 2.094-0.135 1.099-0.141 2.13-0.464 3.063-1.078 1.12-0.74 1.964-1.719 2.505-2.943 0.25-0.563 0.391-1.161 0.495-1.766 0.151-0.901 0.182-1.813 0.182-2.724-0.005-5.063 0-10.125-0.005-15.188zM23.432 13.484v7.615c0 0.557-0.078 1.104-0.328 1.609-0.385 0.786-1.010 1.281-1.849 1.521-0.464 0.135-0.943 0.208-1.427 0.229-1.266 0.063-2.365-0.797-2.589-2.047-0.193-1.031 0.302-2.167 1.385-2.698 0.427-0.208 0.891-0.333 1.354-0.427 0.505-0.109 1.010-0.208 1.51-0.323 0.37-0.083 0.609-0.307 0.682-0.688 0.021-0.083 0.026-0.172 0.026-0.255 0-2.422 0-4.844 0-7.26 0-0.083-0.016-0.167-0.036-0.245-0.052-0.203-0.198-0.323-0.406-0.313-0.214 0.010-0.422 0.047-0.63 0.089-1.016 0.198-2.031 0.401-3.042 0.609l-4.932 0.995c-0.021 0.005-0.047 0.016-0.068 0.016-0.37 0.104-0.5 0.271-0.516 0.656-0.005 0.057 0 0.115 0 0.172-0.005 3.469 0 6.938-0.005 10.406 0 0.563-0.063 1.115-0.286 1.635-0.37 0.854-1.026 1.391-1.911 1.646-0.469 0.135-0.948 0.214-1.438 0.229-1.276 0.047-2.339-0.802-2.557-2.057-0.188-1.083 0.307-2.25 1.536-2.771 0.479-0.198 0.974-0.307 1.479-0.411 0.38-0.078 0.766-0.156 1.146-0.234 0.51-0.109 0.776-0.432 0.802-0.953v-0.198c0-3.948 0-7.896 0-11.844 0-0.167 0.021-0.333 0.057-0.495 0.094-0.38 0.365-0.599 0.729-0.688 0.339-0.089 0.688-0.151 1.031-0.224 0.979-0.198 1.953-0.396 2.932-0.589l3.026-0.615c0.896-0.177 1.786-0.359 2.682-0.536 0.292-0.057 0.589-0.12 0.885-0.141 0.411-0.036 0.698 0.224 0.74 0.641 0.010 0.099 0.016 0.198 0.016 0.297 0 2.547 0 5.094 0 7.641z"/>
+                    </svg></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="sous-titre">Le groupe en vidéo...</h2>
+                <!-- On utilise l'URL no cookie de YouTube pour ne pas stocker de cookies sur le navigateur de l'utilisateur. -->
+                <iframe id="main-video" src="https://www.youtube-nocookie.com/embed/Mlxn5YCMRVo?si=tVBjXwj65HDePsIJ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="sous-titre">Membres du groupe sur scène</h2>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_zoe_colotis.jpg" class="img-fluid rounded" alt="Zoe Colotis">
+            <h3>Zoe Colotis</h3>
+            <p>Zoé Colotis est la chanteuse principale de Caravan Palace, apportant sa voix envoûtante et son charisme sur scène. Sa présence captivante et son style vocal distinctif font partie intégrante de l'identité musicale du groupe. Zoé est également impliquée dans l'écriture des paroles et la composition des chansons, contribuant ainsi à façonner le son unique de Caravan Palace.</p>
+            <p><a href="https://www.lanouvellerepublique.fr/tours/tours-colotis-zoe-la-chanteuse-de-caravan-palace-est-aussi-sonia-comedienne-tourangelle" target="_blank²">En savoir plus...</a></p>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_arnaud_de_bosredon.jpg" class="img-fluid rounded" alt="Arnaud de Bosredon">
+            <h3>Arnaud « Vial » de Bosredon</h3>
+            <p>Arnaud de Bosredon, également connu sous le nom de scène "Vial", est un des membres fondateurs et le guitariste du groupe Caravan Palace. Il est réputé pour son style de jeu unique, mêlant habilement des éléments de jazz manouche, de swing et d'électro. Arnaud contribue non seulement à la musique du groupe avec son talent de guitariste, mais il est également impliqué dans le processus de composition et d'arrangement des chansons.</p>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_charles_delaporte.jpg" class="img-fluid rounded" alt="Charles Delaporte">
+            <h3>Charles Delaporte</h3>
+            <p>Charles Delaporte est le contrebassiste et un autre membre fondateur de Caravan Palace. Sa maîtrise de la contrebasse apporte une base solide à la musique du groupe, contribuant à créer le groove caractéristique de leur son électro-swing. Charles est reconnu pour son jeu dynamique et énergique, qui ajoute une dimension supplémentaire à la performance live du groupe.</p>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_romain_theret.jpg" class="img-fluid rounded" alt="Romain Theret">
+            <h3>Romain Theret</h3>
+            <p>De l'ultime album de Johnny Hallyday (« Mon pays c'est l'amour ») à Indochine en passant par le Starmania de Thomas Jolly, Romain Theret possède une carrière musicale impressionante. Sa participation à la tournée en temps que pianiste et percussionniste mélodique du groupe permet de donner une nouvelle dimension aux morceaux de Caravan Palace, ajoutant ainsi son expérience et son talent à l'ensemble.</p>
+            <p><a href="https://www.carrebarre.fr/la-vie-arrangee-de-romain/" target="_blank">En apprendre plus...</a></p>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_lucas_saint_cricq.jpg" class="img-fluid rounded" alt="Lucas Saint-Cricq">
+            <h3>Lucas Saint-Cricq</h3>
+            <p>Devenir musicien a toujours été une évidence pour Lucas Saint-Cricq. Cet habitant de Lagny-sur-Marne (Seine-et-Marne), aujourd'hui membre de la nouvelle scène jazz, navigue à vue entre le jazz-rap de MC Solaar et son Big Band Project, le jazz-électro du groupe Caravan Palace et le jazz convivial du trompettiste Nicolas Folmer.</p>
+            <p><a href="https://fr.yamaha.com/fr/artists/l/Lucas%20Saint-Cricq.html" target="_blank">En apprendre plus...</a></p>
+        </div>
+        <div class="col-md-4 membre">
+            <img src="./ressources/images/caravan_palace_zayca.jpg" class="img-fluid rounded" alt="Zayka">
+            <h3>Zayka</h3>
+            <p>L'univers musical de Zayka émerge d'une trajectoire riche en expériences et en apprentissages. Né dans le paysage dynamique de la scène musicale nantaise, ce musicien n'a rien d'un novice. Ses premiers pas, il les a faits aux côtés de l'illustre Caravan Palace, où il a forgé son identité artistique avec passion et détermination, incarnant l'esprit d'un projet solo vibrant d'inspiration.</p>
+            <p><a href="https://18heures48.fr/zayka/" target="_blank">En apprendre plus...</a></p>
+        </div>
+        </div>
+
+        <div id="videos-albums" class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="sous-titre">Extraits de leur dernier album</h2>
+            </div>
+            <div class="col-md-4">
+                <iframe src="https://www.youtube-nocookie.com/embed/I2y6RQFKEsc?si=zpc9_VQvl9swogQM" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4">
+                <iframe src="https://www.youtube-nocookie.com/embed/XnSd97-lUCM?si=hKDpLtcpks1ZN2Z9" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4">
+                <iframe src="https://www.youtube-nocookie.com/embed/LyUvNMT-2ro?si=DLhX3ZMa56iaOcJT" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="website-auteur">
+            <p>Auteur : Tom ROULLEAU TDA TP2</p>
+            <a href="mailto:tom.roulleau@etudiant.univ-rennes.fr">Contact</a>
+        </div>
+
+        <p><a href="https://esir.univ-rennes.fr" target="_blank"><img id="Logo_ESIR" src="https://esir.univ-rennes.fr/sites/esir.univ-rennes.fr/files/esir.png" alt="Logo de l'ESIR"></a>©&nbsp;2024&nbsp;CUPGE2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+main h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info p {
+    font-size: 1.75em;
+    margin-bottom: 1em;
+}
+
+#map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    border-radius: 10px;
+    width: 75vw;
+    height: 75vh;
+    margin-bottom: 2em;
+}
+
+#map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+ 
+#tableau {
+    padding: 2% 7% 0 7%;
+}
+
+.table thead tr th {
+    background-color: #B1B4BA;
+}
+
+.table tbody tr td {
+    background-color: #E5E5E5;
+}
+
+.table a {
+    color: #272932;
+    text-decoration: underline dashed #4d5163; /* afin de ne pas avoir un soulignement complet */
+}
+
+/* on souhaite que les angles du tableau soient arrondis */
+.table {
+    overflow: hidden;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #ccc; /* nouvelle bordure */
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    #info p {
+        text-align: center;
+    } 
+}

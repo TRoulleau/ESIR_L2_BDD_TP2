@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tom ROULLEAU">
+    <title>Infos - BDD-IHM TP2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/default_style.css">
+    <link rel="stylesheet" href="./styles/info.css">
+    <link rel="icon" href="./ressources/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="debut-header">
+            <a href="./index.html"><img id="Logo_Site" src="./ressources/images/logo_mouche_2024.png" alt="Logo du site"></a>
+            <p>Festival Mouche Rennes 2024</p>
+        </div>
+        <p>BDD-IHM TP2 - 7 avril 2024</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./presentation.html">Présentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="./programmation.html">Programmation</a></li>
+            <li class="nav-item"><a class="nav-link" href="./artiste.html">Artiste</a></li>
+            <li class="nav-item"><a class="nav-link" href="./billeterie.html">Billeterie</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Info</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Informations</h2>
+            <div id="info">
+                <p>Le festival Mouche Rennes 2024 se déroulera à l'<abbr title="Ecole Supérieure d'Ingénieurs de Rennes">ESIR</abbr>, situé au 263 Avenue du Général Leclerc, 35042 Rennes.</p>
+                <div id="map-responsive">
+                    <!-- l'utilisation d'une iframe de Google Maps peut présenter des inconvénients en termes de confidentialité des données, car cela implique l'inclusion de cookies provenant de Google. 
+                        Ceux-ci peuvent être utilisés pour le suivi des utilisateurs, ce qui peut poser des problèmes de conformité avec les réglementations sur la vie privée du RGPD.
+                        Il faudrait probablement informer les utilisateurs de l'utilisation de ces cookies et leur donner la possibilité de les refuser. -->
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CJ0vESv5y0HOicLj2jah9dqGS2UVv5s&ehbc=2E312F&noprof=1" width="640" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="tableau">
+            <h2>Comment venir sur le lieu du festival :</h2>
+
+            <table class="table table-striped table-bordered table-hover " id="table-transports">
+                <thead>
+                    <tr>
+                        <th scope="col">Moyen de transport</th>
+                        <th scope="col">Informations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>À vélo, en métro, en bus</td>
+                        <td><a href="https://www.star.fr" target="_blank">star.fr</a> et <a href="https://www.breizhgo.bzh/">breizhgo.bzh</a></td>
+                    </tr>
+                    <tr>
+                        <td>Covoiturage</td>
+                        <td><a href="https://www.blablacar.fr/search?fn=France&tn=Rennes%2C%20France" target="_blank">BlaBlaCar</a>, ou avec la plateforme <a href="https://www.tribugo.mobi/fr/" target="_blank">Tribulive</a>.</td>
+                    </tr>
+                    <tr>
+                        <td>En TER</td>
+                        <td>Vous êtes à moins de 30 km ? Voyagez dès 10€ A/R si vous avez + de 26 ans et 8€ si vous avez - de 26 ans ! <a href="https://www.ter.sncf.com/bretagne/se-deplacer/horaires" target="_blank">Découvrez l'offre</a>. Vous voyagez à plusieurs ? Optez pour les PASS TER BreizhGo 2 jours dès 11€ par personne <a href="https://www.ter.sncf.com/bretagne/tarifs-cartes/pass-ter-breizhgo/pass-2-jours" target="_blank">disponible ici</a> ! Plus d'infos sur <a href="https://www.ter.sncf.com" target="_blank">ter.sncf.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>En train</td>
+                        <td>Depuis une autre région : <a href="https://www.sncf-connect.com/app/home/search?userInput=Rennes" target="_blank">sncf.connect.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Institutions :</h2>
+            <table class="table table-striped table-bordered table-hover " id="table-institutions">
+                <thead>
+                    <tr>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Informations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mairie</td>
+                        <!-- Les hrefs avec des numéros de téléphone marchent sur les smartphones mais sur les ordinateurs, ils ouvrent juste une boite de dialogue pour trouver une application pour ouvrir le lien -->
+                        <!-- Avec du javascript, on pourrait détecter si l'utilisateur est sur un smartphone ou un ordinateur et changer le comportement en fonction -->
+                        <td><a href="https://metropole.rennes.fr/" target="_blank">Mairie de Rennes</a>, <a href="tel:+33223621010">+33 (0)2 23 62 10 10</a></td>
+                    </tr>
+                    <tr>
+                        <td>Police</td>
+                        <td><a href="https://lannuaire.service-public.fr/bretagne/ille-et-vilaine/2cbbbca0-b942-46ae-98e8-af28cc246abd" target="_blank">Police de Rennes</a>, <a href="tel:17">17</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pompiers</td>
+                        <td><a href="https://www.sapeurs-pompiers35.fr/centre/rennes-centre/" target="_blank">Pompiers de Rennes</a>, <a href="tel:18">18</a>/<a href="tel:112">112</a></td>
+                    </tr>
+                    <tr>
+                        <td>SAMU/SMUR</td>
+                        <td><a href="https://www.chu-rennes.fr/je-cherche/services-348/samu-smur-urgences-adultes-63.html" target="_blank">SAMU/SMUR/Urgences adultes du CHRU de Rennes</a>, <a href="tel:15">15</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pharmacie</td>
+                        <td><a href="https://metropole.rennes.fr/organisme/pharmacien-de-garde-510" target="_blank">Pharmacie de garde à Rennes</a>, <a href="tel:3237">3237</a> (appel surtaxé 0,34€/min)</td>
+                </tbody>
+            </table>
+
+            <h2>Hébergements :</h2>
+            <table class="table table-striped table-bordered table-hover " id="table-hebergements">
+                <thead>
+                    <tr>
+                        <th scope="col">Type d'hébergement</th>
+                        <th scope="col">Informations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Camping</td>
+                        <td><a href="https://www.camping-rennes.com/" target="_blank">Camping des Gayeulles</a>, <a href="tel:+33299369122">+33 (0)2 99 36 91 22</a></td>
+                    <tr>
+                        <td>Hôtel</td>
+                        <td>Réserver via <a href="https://www.booking.com/city/fr/rennes.fr.html" target="_blank">Booking.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Location d'appartement</td>
+                        <td>Réservez via <a href="https://www.airbnb.fr/rennes-france/stays" target="_blank">Airbnb</a></td>
+                    </tr>
+                    <tr>
+                        <td>Auberge de jeunesse</td>
+                        <td><a href="https://www.hifrance.org/auberges-de-jeunesse/rennes/" target="_blank">Auberge de jeunesse Rennes</a>, <a href="tel:+33299332233">+33 (0)2 99 33 22 33</a></td>
+                    </tr>
+                    <tr>
+                        <td>Plus d'informations</td>
+                        <td>Hôtels, chambres d'hôtes, auberge de jeunesse… de nombreux hébergements sont disponibles ! Destination Rennes, 1 rue Saint-Malo - Rennes, <a href="tel:+33891673535">+33 (0)8 91 67 35 35</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div id="website-auteur">
+            <p>Auteur : Tom ROULLEAU TDA TP2</p>
+            <a href="mailto:tom.roulleau@etudiant.univ-rennes.fr">Contact</a>
+        </div>
+
+        <p><a href="https://esir.univ-rennes.fr" target="_blank"><img id="Logo_ESIR" src="https://esir.univ-rennes.fr/sites/esir.univ-rennes.fr/files/esir.png" alt="Logo de l'ESIR"></a>©&nbsp;2024&nbsp;CUPGE2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

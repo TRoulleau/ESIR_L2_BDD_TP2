@@ -1,0 +1,179 @@
+/* on ajoute une bordure blanche aux images */
+main img {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* pour les vidéos, il faut ajouter la bordure aux iframe */
+iframe {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#info-artiste {
+    display: flex;
+    align-items: center;
+}
+
+#info-artiste img {
+    width: 50vw; /* 50% de la largeur de la fenêtre */
+    margin-right: 1em;
+}
+
+#info-artiste #artiste p {
+    flex: 1 0 50%; /* 50% de la largeur de la fenêtre */
+}
+
+/* on place le nom de l'artiste au centre de la page */
+#nom-artiste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+#artiste h2 {
+    font-size: 3em;
+}
+
+#artiste p {
+    font-size: 1.5em;
+}
+
+/* icônes de réseaux sociaux */
+.social-icons {
+    display: inline-block; /* pour que les icônes soient sur la même ligne */
+}
+
+.social-icons svg {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons a {
+    color: #000000cb;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease; /* pour une transition fluide */
+    opacity: 1;
+}
+
+.social-icons:hover a:not(:hover) {
+    opacity: 0.5; /* afin que les autres icônes soient moins visibles */
+}
+
+.social-icons a:hover {
+    color: #000000cb; /* pour que l'icône reste visible */
+}
+
+/* sous-titres de la page */
+.sous-titre {
+    font-size: 2em;
+}
+
+/* vidéo principale */
+#main-video {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    width: 50%;
+    height: calc((100vw * 9 / 16)/2); /* ratio de 16:9 */
+}
+
+/* membres du groupe sur scène */
+.membre {
+    margin-bottom: 1em;
+}
+
+.membre h3 {
+    font-weight: bold;
+}
+
+.membre p {
+    font-size: 1.5em;
+}
+
+.membre a {
+    text-decoration: underline dashed #000000cb; /* afin de ne pas avoir un soulignement complet */
+    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le précisé cela rendait bien mais sur Firefox le trait était trop fin */
+    color: #000000cb;
+}
+
+/* vidéos des albums */
+#videos-albums {
+    display: flex;
+    justify-content: space-between;
+}
+
+#videos-albums iframe {
+    width: 100%;
+    height: calc(30vw * 9 / 16);
+}
+
+/* pour les écrans de moins de 768px (portables) */
+@media (max-width: 768px) {
+    /* afficher les éléments en colonne */
+    #info-artiste {
+        flex-direction: column;
+    }
+
+    /* réduire la taille de l'image et faire en sorte qu'elle prenne toute la largeur */
+    #info-artiste img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    /* centrer le texte */
+    #artiste p {
+        text-align: center;
+    }
+
+    /* réduire la taille des icônes de réseaux sociaux*/
+    .social-icons svg {
+        width: 50px;
+        height: 50px;
+        margin: 7px;
+    }
+
+    /* centrer les icones et les espacer */
+    .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* désactiver l'effet de hover */
+    .social-icons a {
+        opacity: 1!important;
+    }
+
+    /* centrer les sous-titres */
+    .sous-titre {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* la vidéo principale prend toute la largeur */
+    #main-video {
+        width: 100%;
+        height: calc(100vw * 9 / 16);
+    }
+
+    /* les membres du groupe sont centrés */
+    .membre h3 {
+        display: flex;
+        justify-content: center;
+        font-size: 1.7em;
+    }
+
+    .membre p {
+        font-size: 1.5em;
+    }
+
+    /* les vidéos des albums prennent toute la largeur */
+    #videos-albums iframe {
+        width: 100%;
+        height: calc(100vw * 9 / 16);
+    }
+}

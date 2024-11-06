@@ -1,0 +1,61 @@
+main {
+    align-items: center;
+}
+
+#infos p {
+	font-weight: 600;
+    font-size: 2.3vw;
+    color: white;
+	padding: 1rem;
+}
+
+#infos {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 2em;
+}
+
+#logo-mouche-2024 {
+    width: 50vw;
+	/* au début, j'avais mis 150% mais ça ne donnait pas pareil sur firefox et chrome*/
+	/* j'ai donc mis 50vw pour que cela marche sur les deux */
+}
+
+@media screen and (max-width: 1000px) {
+	#infos {
+		flex-direction: column;
+	}
+	#logo-mouche-2024 {
+		width: 90%!important;
+	}
+	#infos p {
+		font-size: 5vw!important;
+	}	
+}
+
+/* On ajoute une bordure au carrousel */
+#carouselArtistes {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.carousel-inner {
+	width: 75vw;
+	height: 35vw;
+}
+
+/* On change le titre des images du carrousel */
+h2 {
+	font-weight: 600;
+	color: white;
+}
+
+/* On rend le carrousel plus grand sur les petits écrans (x1,2) */
+@media screen and (max-width: 1000px) {
+	.carousel-inner {
+		width: 90vw;
+		height: 42vw;
+	}
+}

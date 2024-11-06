@@ -1,0 +1,52 @@
+main h1, main p {
+    padding: 0% 7% 0 7%;
+}
+
+/* On stylise le tableau */
+#tableau {
+    padding: 0% 7% 0 7%;
+    overflow: auto;
+}
+
+#table-avancement thead tr th {
+    background-color: #B1B4BA;
+}
+
+#table-avancement tbody tr td {
+    background-color: #E5E5E5;
+}
+
+#table-avancement a {
+    color: #272932;
+    text-decoration: underline dashed #4d5163; /* afin de ne pas avoir un soulignement complet */
+    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le précisé cela rendait bien mais sur Firefox le trait était trop fin */
+}
+
+/* on souhaite que les angles du tableau soient arrondis */
+table {
+    overflow: hidden;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #ccc; /* nouvelle bordure */
+    margin-top: 2em;
+}
+
+th, td {
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+   th, td {
+        font-size: large;
+   }    
+}
+
+main p {
+    font-size: 1.5em;
+}
+
+main p a {
+    text-decoration: underline dashed #000000cb; /* afin de ne pas avoir un soulignement complet */
+    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le précisé cela rendait bien mais sur Firefox le trait était trop fin */
+    color: #000000cb;
+}

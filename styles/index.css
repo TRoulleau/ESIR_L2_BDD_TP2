@@ -19,7 +19,7 @@ main h1, main p {
 #table-avancement a {
     color: #272932;
     text-decoration: underline dashed #4d5163; /* afin de ne pas avoir un soulignement complet */
-    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le précisé cela rendait bien mais sur Firefox le trait était trop fin */
+    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le préciser cela rendait bien mais sur Firefox le trait était trop fin */
 }
 
 /* on souhaite que les angles du tableau soient arrondis */
@@ -47,6 +47,6 @@ main p {
 
 main p a {
     text-decoration: underline dashed #000000cb; /* afin de ne pas avoir un soulignement complet */
-    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le précisé cela rendait bien mais sur Firefox le trait était trop fin */
+    text-decoration-thickness: .1rem; /* épaisseur du trait. Sur chrome, sans le préciser cela rendait bien mais sur Firefox le trait était trop fin */
     color: #000000cb;
 }
